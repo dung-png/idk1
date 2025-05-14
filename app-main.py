@@ -72,6 +72,7 @@ formatted_time = current_time.strftime("%H:%M:%S")
 
 # Set page config
 st.set_page_config(page_title="Weather DASMBLARK", layout="wide")
+st.write("by group3 class 7/2")
 sidebar = st.sidebar
 
 # Status while loading
