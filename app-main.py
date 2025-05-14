@@ -181,7 +181,10 @@ if analyse_clicked:
         st.markdown(f"""
     <b style="font-size: 65px;">Current Weather in {selected_city} ({formatted_time})</b>
     """, unsafe_allow_html=True)
-    st.write(f"timezone: {data["timezone"]}")
+    try:
+        st.write(f"timezone: {data["timezone"]}")
+    except:
+        pass
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("🌡️Temperature:", f"{data['main']['temp']}{selected_unit}",str(round((data['main']['temp']) - (Main_data["data"][0]["temp"]),2)))
     col2.metric("🌡️Max Temperature:", f"{data['main']['temp_max']}{selected_unit}",str(round((data['main']['temp_max']) - (Main_data["data"][0]["max_temp"]),2)))
