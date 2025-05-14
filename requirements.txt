@@ -1,1 +1,6 @@
-
+streamlit
+requests
+folium
+pandas
+streamlit-folium
+streamlit-elements
